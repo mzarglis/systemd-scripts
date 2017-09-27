@@ -1,4 +1,4 @@
-# Make file in /lib/systemd/system
+# Make file in /lib/systemd/system/
 # chmod 644 /lib/systemd/system/teamspeak3.service
 # systemctl enable teamspeak
 # adduser ts3server
