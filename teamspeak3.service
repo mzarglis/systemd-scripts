@@ -1,7 +1,9 @@
-#
-#
-#
-#
+# Make file in /lib/systemd/system
+# chmod 644 /lib/systemd/system/teamspeak3.service
+# systemctl enable teamspeak
+# adduser ts3server
+# chown -R ts3server:ts3server /home/ts3server/teamspeak3
+# chmod -R 0744 /home/ts3server/teamspeak3
 
 [Unit]
 Description=Teamspeak3 Service
@@ -10,6 +12,7 @@ Wants=network.target
 [Service]
 WorkingDirectory=/home/teamspeak3
 User=teamspeak3
+Group=teamspeak3
 ExecStart=/home/teamspeak3/ts3server_minimal_runscript.sh
 ExecStop=/home/teamspeak3/ts3server_startscript.sh stop
 ExecReload=/home/teamspeak3/ts3server_startscript.sh restart
